@@ -418,7 +418,9 @@ button {
 .customers-list-link:hover .customers-list-icon,
 .customers-list-link:focus .customers-list-icon {
   fill: var(--accent-color);
-  border-color: #2196f3;
+}
+.customers-list-link:hover {
+  border-color: var(--accent-color);
 }
 
 .customers-list {
@@ -476,7 +478,7 @@ button {
 .footer-list-icon {
   width: 20px;
   height: 20px;
-  fill: #afb1b8;
+  fill: #ffffff;
 }
 
 .footer-list-link {
@@ -486,7 +488,7 @@ button {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background-color: #ffffff;
+  background-color: #43444d;
   margin: 10px;
 }
 .footer-social {
