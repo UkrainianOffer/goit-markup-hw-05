@@ -271,6 +271,33 @@ img {
   margin-right: 30px;
 }
 
+.section-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  padding-left: 82px;
+  padding-right: 82px;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  background-color: rgba(47, 48, 58, 0.8);
+  color: var(--primary-white-color);
+}
+.activity-list-item {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+.activity-list-item:not(:last-child) {
+  margin-right: 30px;
+}
+
 /* ==========TEAM - LIST========== */
 .team-list {
   color: var(--title-text-color);
@@ -356,6 +383,36 @@ img {
   line-height: 2;
   letter-spacing: 0.06em;
   margin-bottom: 4px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.03em;
+  overflow: auto;
+  transform: translateY(100%);
+  padding-top: 63px;
+  padding-bottom: 63px;
+  padding-left: 24px;
+  padding-right: 24px;
+  background-color: rgba(33, 150, 243, 0.9);
+  color: var(--primary-white-color);
+
+  transition: transform 250ms linear;
+}
+
+.project-list-img-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+.project-list-link-wrapper:hover .overlay,
+.project-list-link-wrapper:focus .overlay {
+  transform: translateY(0%);
 }
 
 .portfolio {
