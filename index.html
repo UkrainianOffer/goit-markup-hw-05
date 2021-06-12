@@ -23,10 +23,10 @@
         <nav class="menu-nav">
                 <a href="" class="logo"><span class="logo-color">Web</span>Studio</a>
         <!-- Навигация сайта -->
-            <ul class="site-nav"> 
-                <li class="menu-item"><a href="" class="link current">Студия</a></li>
-                <li class="menu-item"><a href="./portfolio.html" class="link">Портфолио</a></li>
-                <li class="menu-item"><a href="" class="link">Контакты</a></li>
+            <ul class="site-nav">
+                <li class="menu-item"><a href="" class="menu-link current active">Студия</a></li>
+                <li class="menu-item"><a href="./portfolio.html" class="menu-link active">Портфолио</a></li>
+                <li class="menu-item"><a href="" class="menu-link">Контакты</a></li>
             </ul>
         </nav>
         <!-- Раздел Контактов -->
@@ -54,7 +54,7 @@
          <section class="hero">
             <div class="container">
                 <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-                <button class="button primary" type="button">Заказать услугу</button>
+                <button class="button primary" type="button" data-modal-open>Заказать услугу</button>
             </div>
          </section>
         
@@ -398,6 +398,16 @@
         </div>
     </footer>
 
+     <div class="backdrop is-hidden" data-modal>
+         <div class="modal">
+             <button type="button" class="modal-close-btn" data-modal-close>
+                <svg class="button-list-icon">
+                    <use href="./images/sprite.svg#icon-close"></use>
+                </svg>
+             </button>
+         </div>
+     </div>
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>

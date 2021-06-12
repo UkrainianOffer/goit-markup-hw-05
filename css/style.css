@@ -7,6 +7,8 @@
   --dark-bg-color: #2f303a;
 }
 /* вторичный цвет боди #F5F4FA */
+
+
 h1,
 h2,
 h3,
@@ -34,6 +36,11 @@ ul {
 img {
   display: block;
 }
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
 
 .list {
   list-style: none;
@@ -60,13 +67,26 @@ img {
 }
 
 /* ==========SITE - NAV========== */
-.site-nav .link {
+.site-nav .menu-link {
   color: var(--title-text-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
+  transition: color 250ms linear;
+}
+
+}
+.menu-link.active::after {
+  position: absolute;
+  bottom: -2%;
+  width: 100%;
+  content: "";
+  display: block;
+  height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
 }
 
 .navigation {
@@ -92,14 +112,14 @@ img {
   align-items: center;
 }
 
-.site-nav .link:hover,
-.site-nav .link:focus,
-.site-nav .link:active {
+.site-nav .menu-link:hover,
+.site-nav .menu-link:focus,
+.site-nav .menu-link:active {
   color: var(--accent-color);
   letter-spacing: 0.02em;
 }
 
-.site-nav .link.current {
+.site-nav .menu-link.current {
   color: var(--accent-color);
 }
 
@@ -132,6 +152,7 @@ img {
   text-decoration: none;
   justify-content: center;
   align-items: center;
+  transition: color 250ms linear;
 }
 
 .contacts-list-link:hover,
@@ -340,6 +361,7 @@ img {
   height: 44px;
   border-radius: 50%;
   background-color: #fff;
+  transition: background-color 250ms linear, color 250ms linear;
 }
 .social-list-link:hover,
 .social-list-link:focus {
@@ -354,6 +376,7 @@ img {
   width: 20px;
   height: 20px;
   fill: #afb1b8;
+  transition: fill 250ms linear;
 }
 
 .section-item {
@@ -536,6 +559,7 @@ button {
   align-items: center;
   justify-content: center;
   margin-right: 30px;
+  transition: color 250ms linear;
 }
 
 /* ==========F O O T E R========== */
@@ -622,4 +646,46 @@ button {
   justify-content: center;
   align-items: center;
   margin-left: 70px;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 500ms linear, visibility 500ms linear;
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 528px;
+  min-height: 581px;
+  background-color: var(--primary-white-color);
+}
+.modal-close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+.button-list-icon {
+  width: 18px;
+  height: 18px;
+  color: #000000;
+}
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
